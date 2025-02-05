@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Where in the world?</h1>
+            <div class="darkModeBtn">
+                <i class="fa-regular fa-moon"></i>
+                <p>Dark Mode</p>
+            </div>
+        </div>
+    </header>
+    <section class="filterSection">
+        <div class="container">
+            <div class="searchContries">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="inputBox" type="text" placeholder="Search for a country...">
+            </div>
+            <select id="filter">
+                <option hidden>Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+    </section>
+    <section class="countries">
+        <div class="container">
+            <!-- <div class="countryCard">
+                <div class="countryImageContainer">
+                    <img src="./1.jpg" alt="">
+                </div>
+                <div class="countryContentContainer">
+                    <p id="countryName">Germany</p>
+                    <p id="countryPopulation">Population: <span>81,770,900</span></p>
+                    <p id="countryRegion">Region: <span>Europe</span></p>
+                    <p id="countryCapital">Capital: <span>Berlin</span></p>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</body>
+</html>

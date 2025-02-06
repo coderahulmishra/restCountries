@@ -103,8 +103,13 @@ function fetchCountry(Image,Name,nativeName,population,region,subRegion,capital,
 fetch(`https://restcountries.com/v3.1/name/${urlParams.get("name")}?fullText=true`)
 .then((res) => res.json())
 .then((data) => {
-    data.map((el) => {         
-        fetchCountry(el.flags.svg,el.name.common,"",el.population.toLocaleString("en-IN"),el.region,el.subregion,el.capital.join(", "),el.tld[0],el.currencies[0]);
+    data.map((el) => {   
+        console.log(el);
+        const nativeNameData = Object.values(el.name.nativeName)[0].common;
+        const currenciesData = Object.values(el.currencies).map((el) => {return el.name}).join(", ")
+        const languagesData = Object.values(el.languages).join(", ");
+        console.log(currenciesData);      
+        fetchCountry(el.flags.svg,el.name.common,nativeNameData,el.population.toLocaleString("en-IN"),el.region,el.subregion,el.capital.join(", "),el.tld[0],currenciesData,languagesData);
     })
 })
 

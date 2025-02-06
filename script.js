@@ -53,7 +53,7 @@ fetch("https://restcountries.com/v3.1/all")
 .then((res) => res.json())
 .then((data) => {
     data.map((el) => {
-        console.log(el.capital);
+        console.log(el);
         countryCard(el.flags.svg,el.name.common,el.population.toLocaleString('en-IN'),el.region,el.capital)
     })
 })
